@@ -1,0 +1,22 @@
+{
+    "name": "chenjiahao/rabbitmq",
+    "description": "rabbitmq laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "chenjiahao",
+            "email": "271375247@qq.com"
+        }
+    ],
+    "require": {
+        "php-amqplib/php-amqplib": "^2.9",
+        "monolog/monolog": "~1.12",
+        "swoft/framework": "~2.0.0",
+        "swoft/connection-pool": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CustomRabbitmq\\": "src/"
+        }
+    }    
+}
