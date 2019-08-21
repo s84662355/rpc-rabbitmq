@@ -26,11 +26,23 @@ class AppController extends AbstractController{
         return $a.'      '.time();
     }
 
+    public function aaa($a,$b,$c)
+    {
+        return compact('a','b','c');
+    }
+
+    public function bbb($a)
+    {
+        return compact('a' );
+    }
+
 }
 
 $listener = new ServerListener(new AppController ());
 
 $server = new AppServer(  $channel, $rpc_queue, $listener );
+
+echo "startListen";
 
 $server->startListen();
 

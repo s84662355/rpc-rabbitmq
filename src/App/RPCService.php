@@ -11,5 +11,6 @@ namespace RabbitMqRPC\App;
 
 class RPCService
 {
+    private $driver_pool = [];
 
 }

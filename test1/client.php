@@ -5,15 +5,24 @@ use PhpAmqpLib\Message\AMQPMessage;
 use RabbitMqRPC\RPCServer;
 use RabbitMqRPC\AbstractListener;
 use RabbitMqRPC\RPCClient;
+use RabbitMqRPC\App\AppClient;
 
 $connection = new AMQPStreamConnection('localhost', 5672, 'guest', 'guest');
 $channel = $connection->channel();
 
-$rpc_queue = 'sdfsdfsd';
+$rpc_queue = 'aaaaaaaaaaaa';
 
-///   public function __construct(Channel $channel,string $request_queue,string $connect_name = null) {
 
- $client = new RPCClient($channel,$rpc_queue);
 
-var_dump($client->call('dadasdads;lgdkslg;dksl;gkdk;gldskl;sdas'.time(),[ 'request_method' => '55vcxvcxvxc5555' ]))  ;
+
+$client = new AppClient( $channel, $rpc_queue, [
+       'aaa',
+       'bbb',
+       'ccc',
+   ]);
+
+  var_dump($client->bbb(145645645, [21,3432,645645])) ;
+
+
+
 

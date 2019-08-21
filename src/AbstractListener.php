@@ -7,9 +7,8 @@
  */
 
 namespace RabbitMqRPC;
-
-
-class AbstractListener
+use PhpAmqpLib\Wire\AMQPTable;
+abstract class AbstractListener
 {
-
+    abstract public function handle(array $table, string $body , string $correlation_id) : string;
 }

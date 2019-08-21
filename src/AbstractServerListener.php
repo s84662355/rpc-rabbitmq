@@ -1,68 +1,55 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: chenjiahao
+ * Date: 2019-08-20
+ * Time: 16:35
+ */
+
 namespace RabbitMqRPC;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 use PhpAmqpLib\Exception\AMQPConnectionClosedException;
 use PhpAmqpLib\Channel\AbstractChannel as Channel;
 use PhpAmqpLib\Wire\AMQPTable;
-class AbstractServer {
-    private $channel;
-    private $callback;
-    private $request_queue;
-    private $consumer_tag;
+use Throwable;
+use Exception;
+abstract class AbstractServerListener extends AbstractListener
+{
+    protected $controller = null;
 
-    public function __construct(Channel $channel,string $request_queue, AbstractListener $callback )
+
+    public function __construct( AbstractController $controller )
     {
-        $this->channel = $channel;
-        $this->request_queue = $request_queue;
-        $this->callback  = $callback ;
+        $this->controller = $controller;
     }
 
 
-
-    public function ready($consumer_tag = false)
+    public function handle(array $table, string $body , string $correlation_id) : string
     {
-        $this->channel->basic_qos(null, 1, null);
+        if(empty($table['request_method']))
+            return '';
 
-        if($consumer_tag)
-        {
-            $this->consumer_tag = $consumer_tag;
-        }else{
-            $this->consumer_tag = __CLASS__.time();
+        $request_method = $table['request_method'];
+
+        $body = unserialize($body);
+
+        if(!is_array($body))
+            return '';
+
+        try{
+            $response = call_user_func_array([$this->controller,$request_method],$body);
+        }catch (Throwable $throwable){
+            return  $this->handleError($throwable);
         }
 
-        ###不使用应答机制
-        $this->channel->basic_consume($this->request_queue, $this->consumer_tag, false, true, false, false, [$this,'process_message']);
+        return $this->filter($response);
+
     }
 
-    public function process_message(AMQPMessage $request_msg)
-    {
-
-        $body = $request_msg->getBody();
-        $correlation_id = $request_msg->get('correlation_id');
-        $response_queue = $request_msg->get('reply_to');
-        $application_headers = $request_msg->get('application_headers');
+    abstract protected function filter($response)  : string ;
 
 
-        $response_body = call_user_func_array([$this->callback,'handle'],[ $application_headers ->getNativeData() ,$body , $correlation_id ]);
-
-
-        $msg = new AMQPMessage(
-            $response_body,
-            array(
-                'correlation_id' =>  $correlation_id
-            )
-        );
-        $request_msg->delivery_info['channel']->basic_publish(
-            $msg, '', $response_queue);
-    }
-
-
-    public function  startListen()
-    {
-        while(count($this->channel->callbacks)) {
-            $this->channel->wait();
-        }
-    }
+    abstract protected function handleError(Throwable $throwable) :string;
 
 };
