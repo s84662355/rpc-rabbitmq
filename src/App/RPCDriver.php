@@ -50,6 +50,11 @@ class RPCDriver
             $config = $this->getRpcDriverConfig($rpcDriver);
 
             $this->appClients[$rpcDriver] = new AppClient($this->channel,$config['queue'],$config['method']);
+
+            if(!empty($config['timeout']))
+            {
+                $this->appClients[$rpcDriver]->setTimeOut($config['timeout']);
+            }
         }
         return $this->appClients[$rpcDriver];
     }

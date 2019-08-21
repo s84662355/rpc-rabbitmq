@@ -21,6 +21,7 @@ return [
                                     'test1',
                                     'test2',
                              ],
+                             'timeout' => 3,
                              'controller' => [
                                  'name' => 'testController',
                                  'args' => [

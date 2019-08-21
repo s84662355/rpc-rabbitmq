@@ -61,7 +61,12 @@ abstract class AbstractClient
         return $this->make($response);
     }
 
-    /**
+    public function setTimeOut($timeout)
+    {
+        $this->timeout = $timeout;
+    }
+
+   /**
      * @param mixed $response
      * @return mixed
      */

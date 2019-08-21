@@ -2,28 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffa0d61-c7b0-4552-bee1-7e4ae80a8039" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/rabbitmq_rpc.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/rabbitmq_rpc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/AbstractCjhService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/AppRpc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/CjhRpcCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/CjhRpcProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/Daemon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/rabbitmq_rpc.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cjh_rpc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AbstractClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractClient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AbstractController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AbstractListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractListener.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AbstractServer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractServer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AbstractServerListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractServerListener.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/AppClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/AppClient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/AppServer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/AppServer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/LogService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/LogService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/RPCDriver.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/RPCDriver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/RPCService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/RPCService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Response.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/ServerListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ServerListener.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPCClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPCClient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPCNoMethodException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPCNoMethodException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPCResponseException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPCResponseException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPCServer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPCServer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/client.php" beforeDir="false" afterPath="$PROJECT_DIR$/test/client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/test/server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1/client.php" beforeDir="false" afterPath="$PROJECT_DIR$/test1/client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/test1/server.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test2/client.php" beforeDir="false" afterPath="$PROJECT_DIR$/test2/client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test2/rabbitmq_rpc.php" beforeDir="false" afterPath="$PROJECT_DIR$/test2/rabbitmq_rpc.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,72 +24,34 @@
   <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
-  <component name="DockManager">
-    <window id="3">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/App/RPCDriver.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="716">
-                    <caret line="69" column="78" lean-forward="true" selection-start-line="69" selection-start-column="78" selection-end-line="69" selection-end-column="78" />
-                    <folding>
-                      <element signature="e#6#92#0#PHP" expanded="true" />
-                      <element signature="e#120#141#0#PHP" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RPCServer.php">
+        <entry file="file://$PROJECT_DIR$/src/App/AppRpc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="60" column="62" lean-forward="true" selection-start-line="60" selection-start-column="62" selection-end-line="60" selection-end-column="62" />
+            <state relative-caret-position="361">
+              <caret line="30" column="58" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App/CjhRpcCommand.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="19" />
               <folding>
-                <element signature="e#6#92#0#PHP" expanded="true" />
+                <element signature="e#6#93#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AbstractServer.php">
+        <entry file="file://$PROJECT_DIR$/test2/server.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="43" column="8" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
-              <folding>
-                <element signature="e#6#92#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/RPCClient.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
-              <folding>
-                <element signature="e#6#92#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test2/client.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="418">
+              <caret line="44" selection-start-line="44" selection-end-line="44" selection-end-column="45" />
               <folding>
                 <element signature="e#64#111#0#PHP" expanded="true" />
               </folding>
@@ -108,11 +60,59 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test2/rabbitmq_rpc.php">
+        <entry file="file://$PROJECT_DIR$/src/App/Daemon.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="24" column="60" lean-forward="true" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+            <state relative-caret-position="-456" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App/AbstractCjhService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="21" column="74" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="74" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App/RPCDriver.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="45" column="62" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="62" />
+              <folding>
+                <element signature="e#6#92#0#PHP" expanded="true" />
+                <element signature="e#120#141#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App/CjhRpcProvider.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test2/client.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="25" column="67" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="67" />
+              <folding>
+                <element signature="e#64#111#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/cjh_rpc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-171" />
           </provider>
         </entry>
       </file>
@@ -125,6 +125,7 @@
       <find>serialize</find>
       <find>queue_declare</find>
       <find>asdasdas</find>
+      <find>timeout</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -144,25 +145,29 @@
         <option value="$PROJECT_DIR$/vendor/php-amqplib/php-amqplib/PhpAmqpLib/Helper/Protocol/Protocol080.php" />
         <option value="$PROJECT_DIR$/test1/server.php" />
         <option value="$PROJECT_DIR$/test1/client.php" />
-        <option value="$PROJECT_DIR$/config/rabbitmq_rpc.php" />
         <option value="$PROJECT_DIR$/src/App/AppServer.php" />
         <option value="$PROJECT_DIR$/src/RPCNoMethodException.php" />
         <option value="$PROJECT_DIR$/src/RPCResponseException.php" />
         <option value="$PROJECT_DIR$/src/RPCServer.php" />
         <option value="$PROJECT_DIR$/src/AbstractServer.php" />
         <option value="$PROJECT_DIR$/src/AbstractController.php" />
-        <option value="$PROJECT_DIR$/test2/rabbitmq_rpc.php" />
         <option value="$PROJECT_DIR$/src/App/LogService.php" />
-        <option value="$PROJECT_DIR$/src/App/RPCDriver.php" />
         <option value="$PROJECT_DIR$/src/App/Response.php" />
         <option value="$PROJECT_DIR$/src/App/RPCService.php" />
         <option value="$PROJECT_DIR$/src/AbstractServerListener.php" />
         <option value="$PROJECT_DIR$/src/App/ServerListener.php" />
-        <option value="$PROJECT_DIR$/test2/client.php" />
         <option value="$PROJECT_DIR$/test2/server.php" />
         <option value="$PROJECT_DIR$/src/App/AppClient.php" />
-        <option value="$PROJECT_DIR$/src/AbstractClient.php" />
         <option value="$PROJECT_DIR$/src/RPCClient.php" />
+        <option value="$PROJECT_DIR$/test2/client.php" />
+        <option value="$PROJECT_DIR$/src/AbstractClient.php" />
+        <option value="$PROJECT_DIR$/test2/rabbitmq_rpc.php" />
+        <option value="$PROJECT_DIR$/config/rabbitmq_rpc.php" />
+        <option value="$PROJECT_DIR$/src/App/RPCDriver.php" />
+        <option value="$PROJECT_DIR$/src/App/AppRpc.php" />
+        <option value="$PROJECT_DIR$/src/App/AbstractCjhService.php" />
+        <option value="$PROJECT_DIR$/src/App/CjhRpcCommand.php" />
+        <option value="$PROJECT_DIR$/src/App/CjhRpcProvider.php" />
       </list>
     </option>
   </component>
@@ -181,16 +186,17 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="435" />
-    <option name="y" value="-1204" />
-    <option name="width" value="1740" />
-    <option name="height" value="1140" />
+    <option name="x" value="194" />
+    <option name="y" value="37" />
+    <option name="width" value="1413" />
+    <option name="height" value="934" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -217,53 +223,12 @@
             <path>
               <item name="rpc-rabbitmq" type="b2602c69:ProjectViewProjectNode" />
               <item name="rpc-rabbitmq" type="462c0819:PsiDirectoryNode" />
-              <item name="test1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rpc-rabbitmq" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rpc-rabbitmq" type="462c0819:PsiDirectoryNode" />
               <item name="test2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rpc-rabbitmq" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rpc-rabbitmq" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rpc-rabbitmq" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rpc-rabbitmq" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="php-amqplib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rpc-rabbitmq" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rpc-rabbitmq" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="php-amqplib" type="462c0819:PsiDirectoryNode" />
-              <item name="php-amqplib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rpc-rabbitmq" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rpc-rabbitmq" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="php-amqplib" type="462c0819:PsiDirectoryNode" />
-              <item name="php-amqplib" type="462c0819:PsiDirectoryNode" />
-              <item name="PhpAmqpLib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rpc-rabbitmq" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rpc-rabbitmq" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="php-amqplib" type="462c0819:PsiDirectoryNode" />
-              <item name="php-amqplib" type="462c0819:PsiDirectoryNode" />
-              <item name="PhpAmqpLib" type="462c0819:PsiDirectoryNode" />
-              <item name="Channel" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -275,11 +240,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\phpStudyNew\PHPTutorial\WWW\rpc-rabbitmq\src\App" />
+      <recent name="D:\phpStudyNew\PHPTutorial\WWW\rpc-rabbitmq\config" />
       <recent name="$PROJECT_DIR$/test2" />
       <recent name="$PROJECT_DIR$/config" />
       <recent name="$PROJECT_DIR$/test1" />
-      <recent name="$PROJECT_DIR$/src/App" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -310,13 +275,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39433000" />
+    <option name="totallyTimeSpent" value="45730000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="435" y="-1204" width="1740" height="1140" extended-state="0" />
+    <frame x="194" y="37" width="1413" height="934" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22143698" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3865484" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -329,13 +294,34 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.51240456" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32958803" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3114754" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.33976835" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -400,47 +386,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test2/wdas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/rabbitmq_rpc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AbstractController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/LogService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
-          <folding>
-            <element signature="e#122#141#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RPCResponseException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="17" />
-          <folding>
-            <element signature="e#6#92#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test2/wdas.php" />
     <entry file="file://$PROJECT_DIR$/src/RPCNoMethodException.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -455,24 +401,6 @@
           <folding>
             <element signature="e#6#92#0#PHP" expanded="true" />
             <element signature="e#117#164#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/RPCService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/AppServer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding>
-            <element signature="e#6#92#0#PHP" expanded="true" />
-            <element signature="e#120#170#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -508,62 +436,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test2/server.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-          <folding>
-            <element signature="e#64#111#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/RPCDriver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
-          <caret line="69" column="78" lean-forward="true" selection-start-line="69" selection-start-column="78" selection-end-line="69" selection-end-column="78" />
-          <folding>
-            <element signature="e#6#92#0#PHP" expanded="true" />
-            <element signature="e#120#141#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/php-amqplib/php-amqplib/PhpAmqpLib/Channel/AMQPChannel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="670" column="23" lean-forward="true" selection-start-line="670" selection-start-column="23" selection-end-line="670" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/AppClient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#6#92#0#PHP" expanded="true" />
-            <element signature="e#120#170#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Response.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="42" column="44" lean-forward="true" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
-          <folding>
-            <element signature="e#121#138#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AbstractClient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-          <folding>
-            <element signature="e#117#167#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -587,30 +463,179 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/RPCResponseException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-171">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AppServer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+            <element signature="e#120#170#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Response.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="42" column="44" lean-forward="true" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+          <folding>
+            <element signature="e#121#138#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/RPCService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RPCClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="631">
+          <caret line="45" column="15" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+            <element signature="e#116#163#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AppClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+            <element signature="e#120#170#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AbstractClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="63" column="40" lean-forward="true" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="40" />
+          <folding>
+            <element signature="e#117#167#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/rabbitmq_rpc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AbstractController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test2/rabbitmq_rpc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="24" column="60" lean-forward="true" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+        <state relative-caret-position="38">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/LogService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test2/client.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="308">
+          <caret line="25" column="67" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="67" />
           <folding>
             <element signature="e#64#111#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RPCClient.php">
+    <entry file="file://$PROJECT_DIR$/config/cjh_rpc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+        <state relative-caret-position="-171" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/RPCDriver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="45" column="62" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="62" />
           <folding>
             <element signature="e#6#92#0#PHP" expanded="true" />
+            <element signature="e#120#141#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/CJHCommand.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AppRpc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="30" column="58" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Daemon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-456" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AbstractCjhService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="21" column="74" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test2/server.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="44" selection-start-line="44" selection-end-line="44" selection-end-column="45" />
+          <folding>
+            <element signature="e#64#111#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/CjhRpcCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="19" />
+          <folding>
+            <element signature="e#6#93#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/CjhRpcProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
         </state>
       </provider>
     </entry>

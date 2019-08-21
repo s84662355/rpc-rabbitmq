@@ -26,7 +26,7 @@ use RabbitMqRPC\App\RPCDriver;
 var_dump($rpc_driver->AppClient('2')->test1('2322323455646fkl','' ))  ;
 
 
- var_dump($rpc_driver->AppClient('2')->test1('25646fkl','' ))  ;
+ var_dump($rpc_driver->AppClient('2')->test1('25646fkl','dasdsadsd'  ))  ;
 
 
 

@@ -5,7 +5,6 @@
  * Date: 2019-08-20
  * Time: 15:30
  */
-
 namespace RabbitMqRPC;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
@@ -13,6 +12,7 @@ use PhpAmqpLib\Exception\AMQPConnectionClosedException;
 use PhpAmqpLib\Channel\AbstractChannel as Channel;
 use PhpAmqpLib\Exception\AMQPTimeoutException;
 use PhpAmqpLib\Wire\AMQPTable;
+use Exception;
 class RPCClient {
     private $channel;
     private $callback_queue;
@@ -25,9 +25,9 @@ class RPCClient {
         $this->channel = $channel;
         $this->request_queue = $request_queue;
         $this->corr_id = md5($connect_name.microtime().time().uniqid().rand(1000,100000).implode('',$_ENV));
-       //// $channel->queue_declare($rpc_queue , false, false, false, true);
-      list($this->callback_queue, ,) = $this->channel->queue_declare('asdasdas', false, false,false,false)    ;
-      ///  list($this->callback_queue, ,) = $this->channel->queue_declare($this->corr_id , false, false, true, false);
+
+       list($this->callback_queue, ,) = $this->channel->queue_declare('', false, false,false,true)    ;
+
         ###不使用应答机制
         $this->channel->basic_consume(
             $this->callback_queue, '', false,true, false, false,
@@ -40,8 +40,10 @@ class RPCClient {
     {
         if($rep->get('correlation_id') == $this->corr_id) {
             $this->response = $rep->body;
+        }else{
+            throw new Exception('correlation_id 不匹配' );
         }
-
+       ///关闭消费者
         $rep->delivery_info['channel']->basic_cancel($rep->delivery_info['consumer_tag']);
     }
 
@@ -61,6 +63,7 @@ class RPCClient {
         try{
             $this->channel->wait(null,false,$timeout);
         }catch (AMQPTimeoutException $exception){
+            $method = $args['request_method'];
             throw  RPCResponseException::create($timeout,$this->request_queue,$this->corr_id,$method,$this->callback_queue,$n);
         }
 
