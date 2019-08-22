@@ -18,14 +18,11 @@ abstract class AbstractClient
     protected $timeout = 5;
 
 
-    public function __construct(Channel $channel ,string  $request_queue , array $caLL_method)
+    public function __construct(Channel $channel ,string  $request_queue , array $caLL_method = [])
     {
-        $this->caLL_method = array_merge($caLL_method,$this->caLL_method) ;
-        $this->caLL_method = array_unique($this->caLL_method);
         $this->channel = $channel;
         $this->request_queue = $request_queue;
-
-       /// var_dump($this->caLL_method);
+        $this->setCallMethod($caLL_method);
     }
 
 
@@ -39,9 +36,9 @@ abstract class AbstractClient
         $this->request_queue = $request_queue;
     }
 
-    public function setListener(  array $caLL_method )
+    public function setCallMethod(  array $caLL_method )
     {
-        $this->caLL_method = aarray_merge($caLL_method,$this->caLL_method) ;
+        $this->caLL_method = array_merge($caLL_method,$this->caLL_method) ;
         $this->caLL_method = array_unique($this->caLL_method);
     }
 
@@ -66,18 +63,17 @@ abstract class AbstractClient
         $this->timeout = $timeout;
     }
 
-   /**
-     * @param mixed $response
-     * @return mixed
-     */
-    abstract protected function make($response)   ;
-
-
-
     private function filter_method($name)
     {
         return  in_array($name, $this->caLL_method);
     }
+
+
+    /**
+     * @param mixed $response
+     * @return mixed
+     */
+    abstract protected function make($response)   ;
 
 
 }

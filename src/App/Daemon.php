@@ -58,7 +58,9 @@ Class Daemon{
        /// fclose(STDIN);
         fclose(STDOUT);
         fclose(STDERR);
+        $stdin = fopen('/dev/null', 'r');
         $stdout = fopen($file_out, 'a+');
+        $stderr = fopen('/dev/null', 'wb');
         $handle->doHandle();
         
     }

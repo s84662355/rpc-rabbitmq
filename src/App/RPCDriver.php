@@ -48,8 +48,11 @@ class RPCDriver
         if(empty($this->appClients[$rpcDriver]))
         {
             $config = $this->getRpcDriverConfig($rpcDriver);
-
-            $this->appClients[$rpcDriver] = new AppClient($this->channel,$config['queue'],$config['method']);
+            $this->appClients[$rpcDriver] = new AppClient($this->channel,$config['queue']);
+            if(is_array($config['caLL_method']))
+            {
+                $this->appClients[$rpcDriver]-> setCallMethod(  $config['caLL_method'] );
+            }
 
             if(!empty($config['timeout']))
             {

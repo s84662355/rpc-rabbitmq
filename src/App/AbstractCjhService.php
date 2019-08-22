@@ -15,11 +15,15 @@ abstract class AbstractCjhService
     protected $connection = false;
     protected $rpc_config = false;
 
-    protected $rpc_driver = null;
+    protected $rpc_cli = null;
+
+    protected $caLL_method = [];
 
     protected function __construct()
     {
-        $this->rpc_driver = app( 'cjh_rpc')-> getDriver($this->connection)-> AppClient( $this->rpc_config) ;
+        $this->rpc_cli = app( 'cjh_rpc')-> getDriver($this->connection)-> AppClient( $this->rpc_config) ;
+
+        $this->rpc_cli->setCallMethod(  $this->caLL_method );
     }
 
     public static function getInstance()
@@ -31,15 +35,13 @@ abstract class AbstractCjhService
         return self::$instance;
     }
 
-    public function getRpcDriver()
+    public function getRpcCli()
     {
-        return   $this->rpc_driver;
+        return   $this->rpc_cli;
     }
 
     public static function __callStatic($name, $arguments)
     {
-       return call_user_func_array([ self::getInstance()->getRpcDriver() ,$name],$arguments);
+       return call_user_func_array([ self::getInstance()->getRpcCli() ,$name],$arguments);
     }
-
-
 }

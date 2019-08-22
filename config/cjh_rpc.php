@@ -15,15 +15,12 @@ return [
               'username' => env('RABBITMQ_LOGIN', 'guest'),
               'password' => env('RABBITMQ_PASSWORD', 'guest'),
 
-               'rpc_driver' => [
+              'rpc_driver' => [
                    'default' => env('RABBITMQ_RPC_DRIVER', '1'),
 
                     'config' => [
                          '1' => [
                              'queue' => 'bbbbbbb',
-                             'method' => [
-
-                             ],
                              'timeout' => 3,
                              'controller' => [
                                  'name' => '',
@@ -34,7 +31,7 @@ return [
                     ],
 
 
-               ],
+              ],
 
 
           ]

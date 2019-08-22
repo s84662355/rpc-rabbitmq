@@ -13,7 +13,7 @@ use RabbitMqRPC\AbstractServerListener;
 use Exception;
 class AppClient  extends  AbstractClient
 {
-    public function __construct(Channel $channel, string $request_queue, array $caLL_method)
+    public function __construct(Channel $channel, string $request_queue, array $caLL_method = [])
     {
         parent::__construct($channel, $request_queue, $caLL_method);
     }

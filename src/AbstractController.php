@@ -20,4 +20,10 @@ abstract class AbstractController
     }
 
 
+    abstract public function before($name, $arguments);
+
+
+    abstract public function after($name, $arguments);
+
+
 };

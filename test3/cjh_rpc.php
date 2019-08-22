@@ -21,9 +21,6 @@ return [
                     'config' => [
                          '1' => [
                              'queue' => 'bbbbbbb',
-                             'method' => [
-
-                             ],
                              'timeout' => 3,
                              'controller' => [
                                  'name' => '',

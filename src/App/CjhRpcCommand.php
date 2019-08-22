@@ -36,9 +36,6 @@ class CjhRpcCommand  extends Command
         $rpc_config      = $this->option('r');
         $rpc_driver = app( 'cjh_rpc')->getDriver($connection);
         $rpc_driver->AppServer($rpc_config)->startListen( );
-
     }
-
-
 
 }

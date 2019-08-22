@@ -9,7 +9,11 @@
 namespace RabbitMqRPC\App;
 
 
-class AbstractCjhController
+use RabbitMqRPC\AbstractController;
+
+abstract class AbstractCjhController extends AbstractController
 {
+
+
 
 }

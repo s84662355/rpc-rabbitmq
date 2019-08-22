@@ -38,7 +38,9 @@ abstract class AbstractServerListener extends AbstractListener
             return '';
 
         try{
+            call_user_func_array([$this->controller,'before'],[$request_method, $body]  );
             $response = call_user_func_array([$this->controller,$request_method],$body);
+            call_user_func_array([$this->controller,'after'],[$request_method, $body]);
         }catch (Throwable $throwable){
             return  $this->handleError($throwable);
         }
