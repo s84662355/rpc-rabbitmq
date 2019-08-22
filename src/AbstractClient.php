@@ -17,6 +17,8 @@ abstract class AbstractClient
     protected $request_queue = null;
     protected $timeout = 5;
 
+    private $options = [];
+
 
     public function __construct(Channel $channel ,string  $request_queue , array $caLL_method = [])
     {
@@ -47,15 +49,28 @@ abstract class AbstractClient
         if(!$this->filter_method($name))
             throw new RPCNoMethodException(__CLASS__,$name);
 
+        $options =  [ 
+            'request_method' => $name,
+            'options' => $this->options,
+        ];
+
         $rpc_client
             =
             new RPCClient($this->channel,$this->request_queue);
+
+
+
         $response
             =
-            $rpc_client->call(serialize($arguments),[ 'request_method' => $name ], $this->timeout);
+            $rpc_client->call(serialize($arguments),$options, $this->timeout);
 
         $response = unserialize($response);
         return $this->make($response);
+    }
+
+    public function setOptions($options = [])
+    {
+          $this->options  = $options ;
     }
 
     public function setTimeOut($timeout)

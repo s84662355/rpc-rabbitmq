@@ -27,20 +27,31 @@ abstract class AbstractServerListener extends AbstractListener
 
     public function handle(array $table, string $body , string $correlation_id) : string
     {
-        if(empty($table['request_method']))
-            return '';
-
-        $request_method = $table['request_method'];
-
-        $body = unserialize($body);
-
-        if(!is_array($body))
-            return '';
-
         try{
+
+            if(empty($table['request_method']))
+                throw new  Exception(" no  request_method" );
+                
+
+            $request_method = $table['request_method'];
+
+            $body = unserialize($body);
+
+            if(!is_array($body))
+                throw new  Exception(" no  body " );
+
+            $options = [];
+            
+            if(!empty($table['options']))
+            {
+                $options = $table['options'];
+            }
+            /*
             call_user_func_array([$this->controller,'before'],[$request_method, $body]  );
             $response = call_user_func_array([$this->controller,$request_method],$body);
             call_user_func_array([$this->controller,'after'],[$request_method, $body]);
+            */
+            $response = call_user_func_array([$this->controller,'callMethod'],[$request_method,  $body , $options ]);
         }catch (Throwable $throwable){
             return  $this->handleError($throwable);
         }

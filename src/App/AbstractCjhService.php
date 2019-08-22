@@ -12,12 +12,16 @@ use RabbitMqRPC\AbstractController;
 abstract class AbstractCjhService
 {
     protected static $instance = null;
+    
     protected $connection = false;
+    
     protected $rpc_config = false;
 
     protected $rpc_cli = null;
 
     protected $caLL_method = [];
+
+    protected $options = []; 
 
     protected function __construct()
     {
@@ -40,8 +44,14 @@ abstract class AbstractCjhService
         return   $this->rpc_cli;
     }
 
+    public function setOptions($options = [])
+    {
+        $this->options = $options;
+    }
+
     public static function __callStatic($name, $arguments)
     {
+       self::getInstance()->getRpcCli()->setOptions($this->options);
        return call_user_func_array([ self::getInstance()->getRpcCli() ,$name],$arguments);
     }
 }

@@ -20,6 +20,8 @@ class RPCClient {
     private $corr_id;
     private $request_queue;
 
+ 
+
 
     public function __construct(Channel $channel,string $request_queue,string $connect_name = null) {
         $this->channel = $channel;
