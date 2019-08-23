@@ -49,9 +49,14 @@ abstract class AbstractCjhService
         $this->options = $options;
     }
 
+    public function getOptions( )
+    {
+        return $this->options  ;
+    }
+
     public static function __callStatic($name, $arguments)
     {
-       self::getInstance()->getRpcCli()->setOptions($this->options);
+       self::getInstance()->getRpcCli()->setOptions(self::getInstance()->getOptions());
        return call_user_func_array([ self::getInstance()->getRpcCli() ,$name],$arguments);
     }
 }

@@ -8,7 +8,7 @@ use Doctrine\Common\Annotations\AnnotationRegistry;
  * @Annotation
  * @Target("METHOD")
  */
-class  Middleware
+final class Middleware
 {
-	public $class ;
+	public  $names  ;
 }

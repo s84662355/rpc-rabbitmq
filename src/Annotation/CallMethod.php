@@ -6,9 +6,9 @@ use Doctrine\Common\Annotations\AnnotationRegistry;
 
  /**
  * @Annotation
- * @Target("CLASS")
+ * @Target("METHOD")
  */
-class  CallMethod
+final class  CallMethod
 {
-	public $method ;
+	public $name;
 }
