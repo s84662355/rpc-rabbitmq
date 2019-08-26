@@ -8,12 +8,80 @@
 
 namespace RabbitMqRPC\App;
 
-
 use RabbitMqRPC\AbstractController;
-
+use RabbitMqRPC\Annotation\AnnotationTrait;
+use ReflectionClass;
 abstract class AbstractCjhController extends AbstractController
 {
+    use AnnotationTrait;
+
+    public function __construct()
+    {
+        $this->initAnnotationParase();
+    }
+
+    abstract protected function before($name, $arguments , $options = []);
+
+    abstract protected function after($name, $arguments ,$options = [], &$results );
+
+    public function callMethod($name, $arguments , $options = [])
+    {
+        $this->before($name, $arguments , $options  );
+
+        $handle = $this->checkCanCallOn($name);
+
+        if(!empty($handle))
+        {
+            $reflectionClass = new ReflectionClass( $handle );
+
+            $handle = call_user_func_array([$reflectionClass,'newInstance'],[
+                $name , $arguments ,$options
+            ] ) ;
+
+            call_user_func_array([$handle  ,'before'],[]);
+        }
 
 
+        $results = call_user_func_array([$this ,$name],$arguments);
+
+
+        if(!empty($handle))
+        {
+            call_user_func_array([$handle  ,'after'],[$results]);
+        }
+
+
+        $this->after($name, $arguments  ,$options , &$results );
+        return  $results;
+    }
+
+
+    protected function checkCanCallOn($name)
+    {
+         if($this->method_parase[$name])
+         {
+             throw new RPCNoMethodException(__CLASS__, $name);
+         }
+
+         $method_parase = $this->method_parase[$name];
+
+         if( !$method_parase['reflection']->isPublic() || empty($method_parase['parase']['call_method']))
+         {
+             ##要抛出错误
+            // throw new ///;
+         }
+
+         $handle_class = $method_parase['parase']['call_method']->handle;
+
+
+         if(!empty($handle_class))
+         {
+            return  $handle_class;
+         }
+
+
+
+         return null;
+    }
 
 }

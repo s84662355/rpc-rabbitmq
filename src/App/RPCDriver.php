@@ -49,6 +49,7 @@ class RPCDriver
         {
             $config = $this->getRpcDriverConfig($rpcDriver);
             $this->appClients[$rpcDriver] = new AppClient($this->channel,$config['queue']);
+
             if(is_array($config['caLL_method']))
             {
                 $this->appClients[$rpcDriver]-> setCallMethod(  $config['caLL_method'] );
@@ -80,10 +81,10 @@ class RPCDriver
         return $server;
     }
 
-    private function getController(array $AppController)
+    private function getController(string $AppController)
     {
-        $class = new ReflectionClass($AppController['name']);
-        $controller_instance = call_user_func_array([$class,'newInstance'],$AppController['args']) ;
+        $class = new ReflectionClass($AppController );
+        $controller_instance = new $class(); //// call_user_func_array([$class,'newInstance'], ) ;
         return $controller_instance;
     }
 

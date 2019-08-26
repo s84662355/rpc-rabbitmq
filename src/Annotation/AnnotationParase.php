@@ -42,25 +42,8 @@ class AnnotationParase
         $this->annotation_reader = new AnnotationReader();
     }
 
-    public function iniMethodAnnotations( )
-    {
-        $methods = $this->reflection_class->getMethods();
-        foreach ($methods as $m)
-        {
-             $this->method[$m->name] = $this->getMethodAnnotations($m);
-        }
-    }
 
-    public function initPropertyAnnotations( )
-    {
-        $methods = $this->reflection_class->getMethods();
-        foreach ($methods as $m)
-        {
-            $this->method[$m->name] = $this->getMethodAnnotations($m);
-        }
-    }
-
-    public function getMethodAnnotations(ReflectionMethod $method)  : array
+    protected function getMethodAnnotations(ReflectionMethod $method)  : array
     {
         $annotations = $this->annotation_reader->getMethodAnnotations($method);
 
@@ -68,11 +51,11 @@ class AnnotationParase
 
         $results = [];
 
-        foreach ($methodAnnotations as $methodAnnotation)
+        foreach ($methodAnnotations as  $key =>   $methodAnnotation)
         {
-            foreach ($annotations as $annotation) {
+            foreach ($annotations as    $annotation) {
                 if ($annotation instanceof $methodAnnotation) {
-                    $results[$methodAnnotation] = $annotation;
+                    $results[$key] = $annotation;
                     break;
                 }
             }
@@ -81,17 +64,17 @@ class AnnotationParase
     }
 
 
-    public function getClassAnnotations()
+    protected function getClassAnnotations()
     {
         $annotations =  $this->annotation_reader->getClassAnnotations($this->reflection_class);
         $classAnnotations = $this->annotation_config['class'];
         $results = [];
 
-        foreach ($classAnnotations as $classAnnotation)
+        foreach ($classAnnotations as  $key =>   $classAnnotation)
         {
-            foreach ($annotations as $annotation) {
+            foreach ($annotations as   $annotation) {
                 if ($annotation instanceof $classAnnotation) {
-                    $results[$classAnnotation] = $annotation;
+                    $results[$key] = $annotation;
                     break;
                 }
             }
@@ -100,17 +83,17 @@ class AnnotationParase
     }
 
     //ReflectionProperty
-    public function getPropertyAnnotations(ReflectionProperty $property)
+    protected function getPropertyAnnotations(ReflectionProperty $property)
     {
         $annotations =  $this->annotation_reader->getPropertyAnnotations( $property);
         $propertyAnnotations = $this->annotation_config['property'];
 
         $results = [];
-        foreach ($propertyAnnotations as $propertyAnnotation)
+        foreach ($propertyAnnotations as  $key =>  $propertyAnnotation)
         {
             foreach ($annotations as $annotation) {
                 if ($annotation instanceof $propertyAnnotation) {
-                    $results[$propertyAnnotation] = $annotation;
+                    $results[$key] = $annotation;
                     break;
                 }
             }
@@ -118,6 +101,42 @@ class AnnotationParase
         return $results ;
     }
 
+    public function getClassAnnotationParase()
+    {
+        return [
+            'reflection' =>  $this->reflection_class,
+            'parase'     =>  $this->getClassAnnotations(),
+        ];
+    }
+
+
+    public function getMethodAnnotationParase()
+    {
+        $methods = $this->reflection_class->getMethods();
+        foreach ($methods as $m)
+        {
+            $this->method[$m->name] = [
+                'reflection' => $m,
+                'parase' => $this->getMethodAnnotations($m),
+            ];
+        }
+        return   $this->method;
+
+    }
+
+    public function getPropertyAnnotationParase()
+    {
+        $propertys = $this->reflection_class->getProperties();
+        foreach ($propertys as $p)
+        {
+            $this->property[$p->name] = [
+                'reflection' => $p,
+                'parase' => $this->getPropertyAnnotations($p),
+            ];
+
+        }
+        return $this->property;
+    }
 
 
 }

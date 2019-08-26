@@ -15,22 +15,8 @@ use PhpAmqpLib\Wire\AMQPTable;
 
 abstract class AbstractController
 {
-	public function __construct()
-	{
 
-	}
-
-    abstract public function before($name, $arguments , $options = []);
-
-    abstract public function after($name, $arguments, &$results ,$options = []);
-
-    public function callMethod($name, $arguments , $options = [])
-    {
-            $this->before($name, $arguments , $options = []);
-            $results = call_user_func_array([$this ,$name],$arguments);
-            $this->after($name, $arguments , &$results ,$options = []);      
-            return  $results;
-    } 
+    abstract public function callMethod($name, $arguments , $options = []);
 
     public function __call($name, $arguments)
     {

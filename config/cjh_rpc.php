@@ -22,10 +22,7 @@ return [
                          '1' => [
                              'queue' => 'bbbbbbb',
                              'timeout' => 3,
-                             'controller' => [
-                                 'name' => '',
-                                 'args' => [],
-                             ],
+                             'controller' => '',
 
                          ],
                     ],

@@ -8,7 +8,10 @@ use Doctrine\Common\Annotations\AnnotationRegistry;
  * @Annotation
  * @Target("METHOD")
  */
-final class  CallMethod
+ class  CallMethod
 {
-	public $name;
+    /**
+     * @var string
+     */
+	public $handle = '';
 }
