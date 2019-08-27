@@ -16,7 +16,7 @@ return [
 
     'method'   => [
         'call_method' => RabbitMqRPC\Annotation\CallMethod::class,
-        'middleware'  => RabbitMqRPC\Annotation\Middleware::class,
+
     ],
 
     'property' => [

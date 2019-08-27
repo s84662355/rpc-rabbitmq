@@ -8,6 +8,7 @@
 
 namespace RabbitMqRPC\App;
 use Illuminate\Support\ServiceProvider;
+use Doctrine\Common\Annotations\AnnotationRegistry;
 
 class CjhRpcProvider  extends ServiceProvider
 {
@@ -27,6 +28,10 @@ class CjhRpcProvider  extends ServiceProvider
         $this->app->singleton(
             'cjh_rpc',
             function (){
+                $loader =  require  dirname(dirname(  dirname( dirname(  __dir__ ) )      )   )     . '/autoload.php';
+
+                AnnotationRegistry::registerLoader(array($loader, "loadClass"));
+
                 return new AppRpc(config('cjh_rpc'));
             }
         );

@@ -6,12 +6,8 @@ use Doctrine\Common\Annotations\AnnotationRegistry;
 
  /**
  * @Annotation
- * @Target("METHOD")
  */
- class  CallMethod
+final  class  CallMethod
 {
-    /**
-     * @var string
-     */
-	public $handle = '';
+	public $handle ;
 }

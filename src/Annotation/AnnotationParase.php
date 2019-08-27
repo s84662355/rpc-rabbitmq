@@ -13,6 +13,7 @@ use ReflectionClass;
 use ReflectionMethod;
 use ReflectionProperty;
 
+
 /*
  *
  * const integer IS_STATIC = 1 ;
@@ -45,20 +46,12 @@ class AnnotationParase
 
     protected function getMethodAnnotations(ReflectionMethod $method)  : array
     {
-        $annotations = $this->annotation_reader->getMethodAnnotations($method);
-
         $methodAnnotations = $this->annotation_config['method'];
-
         $results = [];
-
         foreach ($methodAnnotations as  $key =>   $methodAnnotation)
         {
-            foreach ($annotations as    $annotation) {
-                if ($annotation instanceof $methodAnnotation) {
-                    $results[$key] = $annotation;
-                    break;
-                }
-            }
+            $annotation = $this->annotation_reader->getMethodAnnotation($method,  $methodAnnotation);
+            $results[$key] = $annotation;
         }
         return $results ;
     }
@@ -72,12 +65,8 @@ class AnnotationParase
 
         foreach ($classAnnotations as  $key =>   $classAnnotation)
         {
-            foreach ($annotations as   $annotation) {
-                if ($annotation instanceof $classAnnotation) {
-                    $results[$key] = $annotation;
-                    break;
-                }
-            }
+            $annotation = $this->annotation_reader->getClassAnnotation($this->reflection_class, $classAnnotation);
+            $results[$key] = $annotation;
         }
         return $results ;
     }
@@ -109,7 +98,6 @@ class AnnotationParase
         ];
     }
 
-
     public function getMethodAnnotationParase()
     {
         $methods = $this->reflection_class->getMethods();
@@ -121,7 +109,6 @@ class AnnotationParase
             ];
         }
         return   $this->method;
-
     }
 
     public function getPropertyAnnotationParase()
@@ -133,7 +120,6 @@ class AnnotationParase
                 'reflection' => $p,
                 'parase' => $this->getPropertyAnnotations($p),
             ];
-
         }
         return $this->property;
     }

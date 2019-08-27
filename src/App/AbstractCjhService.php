@@ -29,13 +29,8 @@ abstract class AbstractCjhService
     protected function __construct()
     {
         $this->iniVariable();
-
         $this->rpc_cli = app( 'cjh_rpc')-> getDriver($this->connection)-> AppClient( $this->rpc_config) ;
-
-
-
         $this->rpc_cli->setCallMethod(  $this->caLL_method );
-
         $this->initAnnotationParase();
     }
 
@@ -99,11 +94,6 @@ abstract class AbstractCjhService
             $options = $this->class_parase['parase']['options'];
             $this->options  = $options;
         }
-
-
-
-
-
 
     }
 
