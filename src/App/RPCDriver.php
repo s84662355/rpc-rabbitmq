@@ -6,6 +6,7 @@
  * Time: 14:30
  */
 namespace RabbitMqRPC\App;
+use RabbitMqRPC\RPCControllerException;
 use \ReflectionClass;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
@@ -83,8 +84,17 @@ class RPCDriver
 
     private function getController(string $AppController)
     {
-        $class = new ReflectionClass($AppController );
-        $controller_instance = new $class(); //// call_user_func_array([$class,'newInstance'], ) ;
+        if(empty($AppController))
+        {
+            throw  new RPCControllerException(' Controller config 不能为空');
+        }
+
+        if(!class_exists($AppController))
+        {
+            throw  new RPCControllerException(" $AppController 没有定义 ");
+        }
+
+        $controller_instance = new $AppController() ;
         return $controller_instance;
     }
 

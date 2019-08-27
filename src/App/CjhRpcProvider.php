@@ -30,7 +30,6 @@ class CjhRpcProvider  extends ServiceProvider
                 return new AppRpc(config('cjh_rpc'));
             }
         );
-
     }
 
     /**

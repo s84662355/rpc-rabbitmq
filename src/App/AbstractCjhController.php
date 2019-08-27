@@ -51,7 +51,7 @@ abstract class AbstractCjhController extends AbstractController
         }
 
 
-        $this->after($name, $arguments  ,$options , &$results );
+        $this->after($name, $arguments  ,$options ,$results );
         return  $results;
     }
 

@@ -10,6 +10,7 @@ use Illuminate\Console\Command;
 
 class CjhRpcCommand  extends Command
 {
+    ///php artisan CjhRpcCommand
     protected $signature = ' CjhRpcCommand {name?}  {--c=} {--r=}  {--out=}';
 
     public function __construct()
