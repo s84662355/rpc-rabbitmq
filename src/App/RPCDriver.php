@@ -69,7 +69,24 @@ class RPCDriver
     {
         $config = $this->getRpcDriverConfig($rpcDriver);
 
-        $this->channel->queue_declare($config['queue'] , false, false, false, true);
+        $arguments = new AMQPTable();
+
+        if(!empty($config['length']))
+        {
+            $arguments->set('x-max-length',intval($config['length']));
+        }
+
+        $this
+            ->channel
+            ->queue_declare(
+                $config['queue'] ,
+                false,
+                false,
+                false,
+                true,
+                false,
+                $arguments
+                );
 
         $listener = new ServerListener( $this->getController($config['controller']));
 

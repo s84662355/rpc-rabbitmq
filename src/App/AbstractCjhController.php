@@ -10,6 +10,7 @@ namespace RabbitMqRPC\App;
 
 use RabbitMqRPC\AbstractController;
 use RabbitMqRPC\Annotation\AnnotationTrait;
+use RabbitMqRPC\RPCNoMethodException;
 use ReflectionClass;
 abstract class AbstractCjhController extends AbstractController
 {
@@ -68,7 +69,7 @@ abstract class AbstractCjhController extends AbstractController
          if( !$method_parase['reflection']->isPublic() || empty($method_parase['parase']['call_method']))
          {
              ##要抛出错误
-            // throw new ///;
+              throw new RPCNoMethodException(__CLASS__,$name);
          }
 
          $handle_class = $method_parase['parase']['call_method']->handle;

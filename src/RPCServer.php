@@ -42,24 +42,29 @@ class RPCServer {
 
     public function process_message(AMQPMessage $request_msg)
     {
-
-        $body = $request_msg->getBody();
-        $correlation_id = $request_msg->get('correlation_id');
-        $response_queue = $request_msg->get('reply_to');
-        $application_headers = $request_msg->get('application_headers');
-
-
-        $response_body = call_user_func_array([$this->callback,'handle'],[ $application_headers ->getNativeData() ,$body , $correlation_id ]);
+        try{
+            $body = $request_msg->getBody();
+            $correlation_id = $request_msg->get('correlation_id');
+            $response_queue = $request_msg->get('reply_to');
+            $application_headers = $request_msg->get('application_headers');
 
 
-        $msg = new AMQPMessage(
-            $response_body,
-            array(
-                'correlation_id' =>  $correlation_id
-            )
-        );
-        $request_msg->delivery_info['channel']->basic_publish(
-            $msg, '', $response_queue);
+            $response_body = call_user_func_array([$this->callback,'handle'],[ $application_headers ->getNativeData() ,$body , $correlation_id ]);
+
+
+            $msg = new AMQPMessage(
+                $response_body,
+                array(
+                    'correlation_id' =>  $correlation_id
+                )
+            );
+            $request_msg->delivery_info['channel']->basic_publish(
+                $msg, '', $response_queue);
+        }catch (\Throwable $throwable){
+            echo $throwable->getMessage();
+        }
+
+
     }
 
 
