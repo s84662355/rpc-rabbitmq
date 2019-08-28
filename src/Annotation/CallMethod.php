@@ -9,5 +9,8 @@ use Doctrine\Common\Annotations\AnnotationRegistry;
  */
 final  class  CallMethod
 {
+    /**
+     * @var string
+     */
 	public $handle ;
 }

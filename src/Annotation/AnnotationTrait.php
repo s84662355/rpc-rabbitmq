@@ -20,7 +20,7 @@ trait AnnotationTrait
     {
         if(empty($this->annotation_parase))
         {
-            $config = include_once 'annotation.config.php';
+            $config = include 'annotation.config.php';
             $this->annotation_parase = new AnnotationParase(static::class,$config);
         }
         return   $this->annotation_parase ;

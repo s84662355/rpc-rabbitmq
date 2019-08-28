@@ -58,8 +58,6 @@ abstract class AbstractClient
             =
             new RPCClient($this->channel,$this->request_queue);
 
-
-
         $response
             =
             $rpc_client->call(serialize($arguments),$options, $this->timeout);

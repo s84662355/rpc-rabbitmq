@@ -29,7 +29,7 @@ abstract class AbstractCjhService
     protected function __construct()
     {
         $this->iniVariable();
-        $this->rpc_cli = app( 'cjh_rpc')-> getDriver($this->connection)-> AppClient( $this->rpc_config) ;
+        $this->rpc_cli = app( 'cjh_rpc' )-> getDriver($this->connection)-> AppClient( $this->rpc_config) ;
         $this->rpc_cli->setCallMethod(  $this->caLL_method );
         $this->initAnnotationParase();
     }
@@ -50,12 +50,22 @@ abstract class AbstractCjhService
 
     public function setOptions($options = [])
     {
-        $this->options = $options;
+        $this->options = array_merge($this->options,$options);
     }
 
     public function getOptions( )
     {
         return $this->options  ;
+    }
+
+    public function getCallMethod()
+    {
+        return  $this->caLL_method;
+    }
+
+    public function getConnection()
+    {
+        return $this->connection;
     }
 
     public function callMethod($name, $arguments)
@@ -86,13 +96,13 @@ abstract class AbstractCjhService
         if(!empty($this->class_parase['parase']['rpc_config']))
         {
             $rpc_config = $this->class_parase['parase']['rpc_config'];
-            $this->rpc_config = $connection->rpc_config;
+            $this->rpc_config = $rpc_config->name;
         }
 
         if(!empty($this->class_parase['parase']['options']))
         {
             $options = $this->class_parase['parase']['options'];
-            $this->options  = $options;
+            $this->options  = $options->value;
         }
 
     }

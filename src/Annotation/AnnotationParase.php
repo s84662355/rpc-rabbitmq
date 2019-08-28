@@ -74,18 +74,12 @@ class AnnotationParase
     //ReflectionProperty
     protected function getPropertyAnnotations(ReflectionProperty $property)
     {
-        $annotations =  $this->annotation_reader->getPropertyAnnotations( $property);
         $propertyAnnotations = $this->annotation_config['property'];
-
         $results = [];
         foreach ($propertyAnnotations as  $key =>  $propertyAnnotation)
         {
-            foreach ($annotations as $annotation) {
-                if ($annotation instanceof $propertyAnnotation) {
-                    $results[$key] = $annotation;
-                    break;
-                }
-            }
+            $annotation = $this->annotation_reader->getPropertyAnnotation($property , $propertyAnnotation);
+            $results[$key] = $annotation;
         }
         return $results ;
     }
