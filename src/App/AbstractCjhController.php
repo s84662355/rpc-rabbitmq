@@ -46,6 +46,9 @@ abstract class AbstractCjhController extends AbstractController
         $results = call_user_func_array([$this ,$name],$arguments);
 
 
+
+
+
         if(!empty($handle))
         {
             call_user_func_array([$handle  ,'after'],[$results]);
@@ -53,23 +56,27 @@ abstract class AbstractCjhController extends AbstractController
 
 
         $this->after($name, $arguments  ,$options ,$results );
+
+
         return  $results;
     }
 
 
     protected function checkCanCallOn($name)
     {
-         if($this->method_parase[$name])
+         if(empty($this->method_parase[$name]) )
          {
              throw new RPCNoMethodException(__CLASS__, $name);
          }
 
          $method_parase = $this->method_parase[$name];
 
+
+
          if( !$method_parase['reflection']->isPublic() || empty($method_parase['parase']['call_method']))
          {
              ##要抛出错误
-              throw new RPCNoMethodException(__CLASS__,$name);
+               throw new RPCNoMethodException(__CLASS__,$name);
          }
 
          $handle_class = $method_parase['parase']['call_method']->handle;

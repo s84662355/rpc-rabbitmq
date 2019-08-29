@@ -75,7 +75,7 @@ class RPCDriver
         {
             $arguments->set('x-max-length',intval($config['length']));
         }
-
+ 
         $this
             ->channel
             ->queue_declare(
@@ -87,6 +87,7 @@ class RPCDriver
                 false,
                 $arguments
                 );
+
 
         $listener = new ServerListener( $this->getController($config['controller']));
 

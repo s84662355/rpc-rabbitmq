@@ -25,16 +25,17 @@ class CjhRpcProvider  extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes([__DIR__ . '/../config' => config_path()], 'cjhrpc-config');
         }
+
         $this->app->singleton(
             'cjh_rpc',
             function (){
                 $loader =  require  dirname(dirname(  dirname( dirname(  __dir__ ) )      )   )     . '/autoload.php';
 
                 AnnotationRegistry::registerLoader(array($loader, "loadClass"));
-
                 return new AppRpc(config('cjh_rpc'));
             }
         );
+
     }
 
     /**
@@ -45,5 +46,8 @@ class CjhRpcProvider  extends ServiceProvider
     public function register()
     {
         $this->commands($this->commands);
+
+
+
     }
 }

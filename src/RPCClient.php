@@ -20,9 +20,6 @@ class RPCClient {
     private $corr_id;
     private $request_queue;
 
- 
-
-
     public function __construct(Channel $channel,string $request_queue,string $connect_name = null) {
         $this->channel = $channel;
         $this->request_queue = $request_queue;
@@ -34,7 +31,6 @@ class RPCClient {
         $this->channel->basic_consume(
             $this->callback_queue, '', false,true, false, false,
             array($this, 'on_response'));
-
     }
 
 

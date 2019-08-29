@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffa0d61-c7b0-4552-bee1-7e4ae80a8039" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/App/AbstractCjhController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/AbstractCjhController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/RPCDriver.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/RPCDriver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPCServer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPCServer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/AbstractCjhService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/AbstractCjhService.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RPCClient.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-24">
-              <caret line="30" column="60" lean-forward="true" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="69" />
+            <state relative-caret-position="227">
+              <caret line="47" column="15" lean-forward="true" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
               <folding>
                 <element signature="e#6#92#0#PHP" expanded="true" />
               </folding>
@@ -29,22 +28,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/php-amqplib/php-amqplib/PhpAmqpLib/Wire/AMQPAbstractCollection.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App/CjhRpcCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="364" column="36" lean-forward="true" selection-start-line="364" selection-start-column="36" selection-end-line="364" selection-end-column="36" />
+            <state relative-caret-position="150">
+              <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+              <folding>
+                <element signature="e#6#93#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RPCServer.php">
+        <entry file="file://$PROJECT_DIR$/src/App/AbstractCjhController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+            <state relative-caret-position="855">
+              <caret line="62" column="10" lean-forward="true" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
               <folding>
-                <element signature="e#6#92#0#PHP" expanded="true" />
+                <element signature="e#122#157#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/AbstractCjhService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="52" column="37" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
+            <state relative-caret-position="204">
+              <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
               <folding>
                 <element signature="e#123#158#0#PHP" expanded="true" />
               </folding>
@@ -63,67 +65,68 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Annotation/CallMethod.php">
+        <entry file="file://$PROJECT_DIR$/src/App/AppRpc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+            <state relative-caret-position="375">
+              <caret line="30" column="23" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AbstractClient.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="554">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
               <folding>
-                <element signature="e#41#90#0#PHP" expanded="true" />
+                <element signature="e#117#167#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Annotation/annotation.config.php">
+        <entry file="file://$PROJECT_DIR$/src/AbstractListener.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="66" lean-forward="true" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Annotation/RPCMethod.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="7" />
               <folding>
-                <element signature="e#128#177#0#PHP" expanded="true" />
+                <element signature="e#6#92#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Annotation/Connection.php">
+        <entry file="file://$PROJECT_DIR$/src/AbstractServerListener.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+            <state relative-caret-position="495">
+              <caret line="55" column="51" lean-forward="true" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
               <folding>
-                <element signature="e#128#177#0#PHP" expanded="true" />
+                <element signature="e#6#92#0#PHP" expanded="true" />
+                <element signature="e#117#164#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Annotation/RPCConfig.php">
+        <entry file="file://$PROJECT_DIR$/src/RPCResponseException.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-              <folding>
-                <element signature="e#128#177#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="555">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Annotation/Options.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App/Response.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+            <state relative-caret-position="540">
+              <caret line="41" column="27" lean-forward="true" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+              <folding>
+                <element signature="e#121#138#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -212,12 +215,12 @@
         <option value="$PROJECT_DIR$/src/Annotation/CallMethod.php" />
         <option value="$PROJECT_DIR$/src/Annotation/AnnotationParase.php" />
         <option value="$PROJECT_DIR$/src/Annotation/AnnotationTrait.php" />
-        <option value="$PROJECT_DIR$/src/App/AbstractCjhService.php" />
         <option value="$PROJECT_DIR$/src/AbstractClient.php" />
         <option value="$PROJECT_DIR$/src/App/CjhRpcCommand.php" />
         <option value="$PROJECT_DIR$/src/App/AbstractCjhController.php" />
         <option value="$PROJECT_DIR$/src/App/RPCDriver.php" />
         <option value="$PROJECT_DIR$/src/RPCServer.php" />
+        <option value="$PROJECT_DIR$/src/App/AbstractCjhService.php" />
       </list>
     </option>
   </component>
@@ -229,17 +232,17 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/php-amqplib/php-amqplib" />
       <path value="$PROJECT_DIR$/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
       <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="145" />
-    <option name="y" value="-1332" />
+    <option name="x" value="1068" />
+    <option name="y" value="-992" />
     <option name="width" value="1622" />
     <option name="height" value="1141" />
   </component>
@@ -369,20 +372,22 @@
       <workItem from="1566783886947" duration="15333000" />
       <workItem from="1566867972057" duration="4788000" />
       <workItem from="1566922860166" duration="23000" />
+      <workItem from="1567041623162" duration="9289000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103612000" />
+    <option name="totallyTimeSpent" value="112941000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="427" y="-1004" width="1622" height="1141" extended-state="0" />
+    <frame x="367" y="-986" width="1622" height="1141" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2607595" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26392406" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32983795" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32983795" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -391,7 +396,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.264061" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.264061" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -534,13 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/AppRpc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/RPCService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -567,13 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RPCResponseException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="45" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -588,33 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/CjhRpcProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="30" column="113" lean-forward="true" selection-start-line="30" selection-start-column="113" selection-end-line="30" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Annotation/AnnotationParase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="62" column="52" lean-forward="true" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="52" />
-          <folding>
-            <element signature="e#128#177#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Response.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="42" column="44" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
-          <folding>
-            <element signature="e#121#138#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/AppClient.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -622,23 +586,6 @@
           <folding>
             <element signature="e#6#92#0#PHP" expanded="true" />
             <element signature="e#120#170#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Annotation/AnnotationTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/AbstractCjhController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="71" column="60" selection-start-line="71" selection-start-column="60" selection-end-line="71" selection-end-column="60" />
-          <folding>
-            <element signature="e#122#157#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -668,16 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AbstractListener.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="7" />
-          <folding>
-            <element signature="e#6#92#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/AppServer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -685,37 +622,6 @@
           <folding>
             <element signature="e#6#92#0#PHP" expanded="true" />
             <element signature="e#120#170#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/CjhRpcCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
-          <folding>
-            <element signature="e#6#93#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AbstractClient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-          <folding>
-            <element signature="e#117#167#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AbstractServerListener.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-          <folding>
-            <element signature="e#6#92#0#PHP" expanded="true" />
-            <element signature="e#117#164#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -762,44 +668,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/php-amqplib/php-amqplib/PhpAmqpLib/Wire/AMQPAbstractCollection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="364" column="36" lean-forward="true" selection-start-line="364" selection-start-column="36" selection-end-line="364" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RPCClient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="30" column="60" lean-forward="true" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="69" />
-          <folding>
-            <element signature="e#6#92#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="5445">
+          <caret line="364" column="36" selection-start-line="364" selection-start-column="36" selection-end-line="364" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RPCServer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+        <state relative-caret-position="405">
+          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
           <folding>
             <element signature="e#6#92#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/AbstractCjhService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="52" column="37" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
-          <folding>
-            <element signature="e#123#158#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Annotation/CallMethod.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="120">
           <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
           <folding>
             <element signature="e#41#90#0#PHP" expanded="true" />
@@ -807,17 +693,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Annotation/annotation.config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="66" lean-forward="true" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Annotation/RPCMethod.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        <state relative-caret-position="255">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
           <folding>
             <element signature="e#128#177#0#PHP" expanded="true" />
           </folding>
@@ -826,8 +705,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Annotation/Connection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        <state relative-caret-position="270">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding>
             <element signature="e#128#177#0#PHP" expanded="true" />
           </folding>
@@ -836,8 +715,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Annotation/RPCConfig.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        <state relative-caret-position="255">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
           <folding>
             <element signature="e#128#177#0#PHP" expanded="true" />
           </folding>
@@ -848,6 +727,132 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/CjhRpcProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="30" column="113" lean-forward="true" selection-start-line="30" selection-start-column="113" selection-end-line="30" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Annotation/AnnotationTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Annotation/annotation.config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Annotation/AnnotationParase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+          <folding>
+            <element signature="e#128#177#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AppRpc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="30" column="23" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Response.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="41" column="27" lean-forward="true" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+          <folding>
+            <element signature="e#121#138#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AbstractClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="e#117#167#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AbstractListener.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="7" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AbstractServerListener.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="55" column="51" lean-forward="true" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+            <element signature="e#117#164#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RPCResponseException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AbstractCjhService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+          <folding>
+            <element signature="e#123#158#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RPCClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="47" column="15" lean-forward="true" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/AbstractCjhController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="62" column="10" lean-forward="true" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
+          <folding>
+            <element signature="e#122#157#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/CjhRpcCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding>
+            <element signature="e#6#93#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
