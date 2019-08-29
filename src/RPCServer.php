@@ -37,11 +37,8 @@ class RPCServer {
         }
 
         ###不使用应答机制
-   ///     $this->channel->basic_consume($this->request_queue, $this->consumer_tag, false, true, false, false, [$this,'process_message']);
-        $this->channel->basic_consume(
-            $this->request_queue,
-            $this->consumer_tag,
-            false, false, false, false, [$this,'process_message']);
+       $this->channel->basic_consume($this->request_queue, $this->consumer_tag, false, true, false, false, [$this,'process_message']);
+     
     }
 
     public function process_message(AMQPMessage $request_msg)
