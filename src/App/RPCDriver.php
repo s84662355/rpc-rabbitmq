@@ -26,6 +26,7 @@ class RPCDriver
     private $rpcDriverConfig = [];
     private $defaultRpcDriverConfig = '';
     private $appClients = [];
+    private $handle = [];
 
     public function __construct( $config )
     {
@@ -35,6 +36,11 @@ class RPCDriver
 
         $this->rpcDriverConfig = $config['rpc_driver']['config'];
         $this->defaultRpcDriverConfig = $config['rpc_driver']['default'];
+    }
+
+    public function setHandle($handle)
+    {
+         $this->handle = $handle;
     }
 
     private function getRpcDriverConfig($rpcDriver = false)
@@ -113,6 +119,7 @@ class RPCDriver
         }
 
         $controller_instance = new $AppController() ;
+        $controller_instance-> setHandle($this->handle);
         return $controller_instance;
     }
 

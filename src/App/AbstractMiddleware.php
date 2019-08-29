@@ -10,19 +10,10 @@ namespace RabbitMqRPC\App;
 
 abstract class AbstractMiddleware
 {
-    public function __construct($name, $arguments , $options = [])
-    {
+    abstract  public function __construct($name, $arguments ,array $options = []);
 
-    }
+    abstract public function before();
 
-    public function before()
-    {
-
-    }
-
-    public function after(&$results)
-    {
-
-    }
+    abstract public function after(&$results);
 
 }

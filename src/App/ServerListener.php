@@ -15,7 +15,7 @@ class ServerListener extends  AbstractServerListener
 {
     private $log_path = false;
 
-    public function __construct(AbstractController $controller,$log_path = false)
+    public function __construct(AbstractCjhController $controller,$log_path = false)
     {
         parent::__construct($controller);
         $this->log_path = $log_path;

@@ -15,11 +15,12 @@ use PhpAmqpLib\Wire\AMQPTable;
 
 abstract class AbstractController
 {
-
     abstract public function callMethod($name, $arguments , $options = []);
 
     public function __call($name, $arguments)
     {
         throw new RPCNoMethodException(__CLASS__, $name);
     }
+
+
 };

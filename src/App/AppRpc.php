@@ -12,10 +12,12 @@ class AppRpc
 {
     private $rpc_driver_pool = [];
     private $config = [];
+    private $handle = [];
 
-    public function __construct($config)
+    public function __construct($config , $handle = [])
     {
          $this->config = $config;
+         $this->handle = $handle;
     }
 
     private function getDriverConfig($driver_config = false) : array
@@ -37,6 +39,8 @@ class AppRpc
         {
             $driver_config = $this->getDriverConfig($driver);
             $this->rpc_driver_pool[$driver] = new RPCDriver($driver_config);
+
+            $this->rpc_driver_pool[$driver]-> setHandle($this->handle);
         }
         return  $this->rpc_driver_pool[$driver] ;
     }

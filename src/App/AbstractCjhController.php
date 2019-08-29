@@ -16,6 +16,8 @@ abstract class AbstractCjhController extends AbstractController
 {
     use AnnotationTrait;
 
+    protected $handle = [];
+
     public function __construct()
     {
         $this->initAnnotationParase();
@@ -33,30 +35,23 @@ abstract class AbstractCjhController extends AbstractController
 
         if(!empty($handle))
         {
+            $handle = $this->handle[$handle];
             $reflectionClass = new ReflectionClass( $handle );
-
             $handle = call_user_func_array([$reflectionClass,'newInstance'],[
                 $name , $arguments ,$options
             ] ) ;
-
             call_user_func_array([$handle  ,'before'],[]);
         }
-
 
         $results = call_user_func_array([$this ,$name],$arguments);
 
 
-
-
-
         if(!empty($handle))
         {
-            call_user_func_array([$handle  ,'after'],[$results]);
+            $handle->after($results);
         }
 
-
         $this->after($name, $arguments  ,$options ,$results );
-
 
         return  $results;
     }
@@ -70,8 +65,6 @@ abstract class AbstractCjhController extends AbstractController
          }
 
          $method_parase = $this->method_parase[$name];
-
-
 
          if( !$method_parase['reflection']->isPublic() || empty($method_parase['parase']['call_method']))
          {
@@ -87,9 +80,12 @@ abstract class AbstractCjhController extends AbstractController
             return  $handle_class;
          }
 
-
-
          return null;
+    }
+
+    public function setHandle($handle)
+    {
+        $this->handle = $handle;
     }
 
 }
