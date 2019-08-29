@@ -32,7 +32,7 @@ class CjhRpcProvider  extends ServiceProvider
                 $loader =  require  dirname(dirname(  dirname( dirname(  __dir__ ) )      )   )     . '/autoload.php';
 
                 AnnotationRegistry::registerLoader(array($loader, "loadClass"));
-                return new AppRpc(config('cjh_rpc'));
+                return new AppRpc(config('cjh_rpc'),config('rpc_handle'));
             }
         );
 
