@@ -55,6 +55,10 @@ $rpc = new AppRpc($config);
  * */
 class Test1   extends AbstractService
 {
+    public function __construct(AppRpc $cjh_rpc)
+    {
+        parent::__construct($cjh_rpc);
+    }
 
 }
 

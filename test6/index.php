@@ -62,7 +62,7 @@ class Test extends  \RabbitMqRPC\App\AbstractCjhController
     }
 
     /**
-     * @CallMethod(handle="Test2")
+     * @CallMethod(handle={"Test2"})
      *
      * */
     public function aaaa($a)
