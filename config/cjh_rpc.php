@@ -24,6 +24,7 @@ return [
                              'timeout' => 3,
                              'length'   => 10,
                              'controller' => '',
+                             'log_path' => '',
 
                          ],
                     ],

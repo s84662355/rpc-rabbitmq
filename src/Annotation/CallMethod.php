@@ -10,7 +10,7 @@ use Doctrine\Common\Annotations\AnnotationRegistry;
 final  class  CallMethod
 {
     /**
-     * @var string
+     * @var array<string>
      */
 	public $handle ;
 }

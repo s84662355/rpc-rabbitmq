@@ -31,24 +31,31 @@ abstract class AbstractCjhController extends AbstractController
     {
         $this->before($name, $arguments , $options  );
 
-        $handle = $this->checkCanCallOn($name);
+        $handles = $this->checkCanCallOn($name);
 
-        if(!empty($handle))
+        if(!empty($handles))
         {
-            $handle = $this->handle[$handle];
-            $reflectionClass = new ReflectionClass( $handle );
-            $handle = call_user_func_array([$reflectionClass,'newInstance'],[
-                $name , $arguments ,$options
-            ] ) ;
-            call_user_func_array([$handle  ,'before'],[]);
+            foreach ($handles as &$value)
+            {
+                $value =  $this->handle[$value];
+                $reflectionClass = new ReflectionClass( $value );
+                $value = call_user_func_array([$reflectionClass,'newInstance'],[
+                    $name , $arguments ,$options
+                ] ) ;
+                call_user_func_array([ $value  ,'before'],[]);
+            }
+
         }
 
         $results = call_user_func_array([$this ,$name],$arguments);
 
 
-        if(!empty($handle))
+        if(!empty($handles))
         {
-            $handle->after($results);
+            foreach ($handles as &$value)
+            {
+                   $value->after($results );
+            }
         }
 
         $this->after($name, $arguments  ,$options ,$results );

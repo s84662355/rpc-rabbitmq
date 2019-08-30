@@ -12,6 +12,7 @@ use PhpAmqpLib\Exception\AMQPConnectionClosedException;
 use PhpAmqpLib\Channel\AbstractChannel as Channel;
 use PhpAmqpLib\Exception\AMQPTimeoutException;
 use PhpAmqpLib\Wire\AMQPTable;
+use RabbitMqRPC\Exception\TimeOut;
 use Exception;
 class RPCClient {
     private $channel;
@@ -62,7 +63,8 @@ class RPCClient {
             $this->channel->wait(null,false,$timeout);
         }catch (AMQPTimeoutException $exception){
             $method = $args['request_method'];
-            throw  RPCResponseException::create($timeout,$this->request_queue,$this->corr_id,$method,$this->callback_queue,$n);
+         //   throw  RPCResponseException::create($timeout,$this->request_queue,$this->corr_id,$method,$this->callback_queue,$n);
+            throw  new TimeOut($this->request_queue.' 请求超时' );
         }
 
         return  $this->response;

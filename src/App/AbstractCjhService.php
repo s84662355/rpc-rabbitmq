@@ -31,7 +31,7 @@ abstract class AbstractCjhService extends   AbstractService
 
     public static function __callStatic($name, $arguments)
     {
-        return call_user_func_array([ self::getInstance() , 'callMethod'], [$name, $arguments]);
+        return call_user_func_array([ self::getInstance() , $name],   $arguments );
     }
 
 }

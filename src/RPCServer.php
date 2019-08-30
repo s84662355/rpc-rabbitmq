@@ -44,8 +44,6 @@ class RPCServer {
     public function process_message(AMQPMessage $request_msg)
     {
         try{
-
-
             $body = $request_msg->getBody();
             $correlation_id = $request_msg->get('correlation_id');
             $response_queue = $request_msg->get('reply_to');
@@ -62,8 +60,6 @@ class RPCServer {
                     'correlation_id' =>  $correlation_id
                 )
             );
-
-            
             
             $request_msg->delivery_info['channel']->basic_publish(
                 $msg, '', $response_queue);
@@ -82,7 +78,7 @@ class RPCServer {
                 $this->channel->wait();
             }
         }catch (\Throwable $throwable){
-            echo "5555555555";
+
             echo $throwable->getMessage();
         }
 

@@ -52,13 +52,15 @@ class Test extends  \RabbitMqRPC\App\AbstractCjhController
     protected function before($name, $arguments , $options = [])
     {
 
-
+        var_dump(__METHOD__);
+        echo PHP_EOL;
 
     }
 
     protected function after($name, $arguments ,$options = [], &$results )
     {
-
+        var_dump(__METHOD__);
+        echo PHP_EOL;
     }
 
     /**

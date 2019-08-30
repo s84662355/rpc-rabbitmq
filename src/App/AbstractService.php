@@ -27,7 +27,7 @@ abstract class AbstractService
 
     protected $options = []; 
 
-    public function __construct(AppRpc $cjh_rpc )
+    protected function __construct(AppRpc $cjh_rpc )
     {
 
         $this->iniVariable();
