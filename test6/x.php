@@ -14,6 +14,11 @@ use RabbitMqRPC\Annotation\RPCMethod;
 use RabbitMqRPC\Annotation\Connection;
 use RabbitMqRPC\Annotation\RPCConfig;
 use RabbitMqRPC\Annotation\Options;
+use Predis\Client;
+
+
+
+var_dump(unserialize("a:1:{i:0;O:32:"RabbitMqRPC\Annotation\RPCMethod":1:{s:6:"method";a:1:{i:0;s:4:"aaaa";}}}"))  ;
 
 $config =  [
     'default' =>  'first',
@@ -55,8 +60,24 @@ $rpc = new AppRpc($config);
  * */
 class Test1   extends AbstractService
 {
+
+
     public function __construct(AppRpc $cjh_rpc)
     {
+        $this->annotation_config = include dirname(__DIR__ ). '/config/annotation_config.php';
+        $server = array(
+            'host'     => '127.0.0.1',
+            'port'     => 6379,
+            'database' =>0
+        );
+        $this->redis = new Client($server);
+
+
+
+        $this->redis_key = '1111';
+
+
+
         parent::__construct($cjh_rpc);
     }
 
@@ -67,13 +88,13 @@ $test = new  Test1($rpc);
 
 $test->setOptions(['ddsa'=>'315645']);
 
-echo $test->aaaa("dsadsad");
+echo $test->aaaa("ddgdfgdfgdfgdfd");
 
 
 
-$test->setOptions(['d43432dsa'=>'3511111111111115']);
+$test->setOptions(['d43432dsa'=>'3 1111115']);
 
-echo $test->aaaa("d1 11111d");
+echo $test->aaaa(" 1d");
 
 //$rpc->getDriver()->AppServer()->startListen();
  

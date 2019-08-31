@@ -10,6 +10,10 @@ use RabbitMqRPC\Annotation\CallMethod;
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use RabbitMqRPC\App\AbstractMiddleware;
 
+
+
+
+
 $config =  [
     'default' =>  'first',
     'driver' => [
@@ -41,10 +45,11 @@ $config =  [
 ];
 
 
-class Test extends  \RabbitMqRPC\App\AbstractCjhController
+class Test extends  \RabbitMqRPC\App\AbstractController
 {
     public function __construct()
     {
+        $this->annotation_config = include dirname(__DIR__ ). '/config/annotation_config.php';
         parent::__construct();
         echo "dsadsadsa";
     }
