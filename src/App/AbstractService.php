@@ -15,7 +15,7 @@ abstract class AbstractService
 {
     use AnnotationTrait;
 
-
+    protected $annotation_config = [];
     
     protected $connection = false;
     
@@ -27,7 +27,7 @@ abstract class AbstractService
 
     protected $options = []; 
 
-    protected function __construct(AppRpc $cjh_rpc )
+    protected function __construct(AppRpc $cjh_rpc   )
     {
 
         $this->iniVariable();

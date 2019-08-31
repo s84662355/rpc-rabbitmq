@@ -8,13 +8,15 @@
 
 namespace RabbitMqRPC\App;
 
-use RabbitMqRPC\AbstractController;
+use RabbitMqRPC\AbstractController as Controller;
 use RabbitMqRPC\Annotation\AnnotationTrait;
 use RabbitMqRPC\RPCNoMethodException;
 use ReflectionClass;
-abstract class AbstractCjhController extends AbstractController
+abstract class AbstractController extends   Controller
 {
     use AnnotationTrait;
+
+    protected $annotation_config = [];
 
     protected $handle = [];
 

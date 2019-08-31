@@ -20,8 +20,15 @@ trait AnnotationTrait
     {
         if(empty($this->annotation_parase))
         {
-            $config = include 'annotation.config.php';
-            $this->annotation_parase = new AnnotationParase(static::class,$config);
+          ////  $config = include 'annotation.config.php';
+            ///
+            $config = $this->annotation_config;
+
+            $redis = $this->redis;
+
+            $key = $this->redis_key;
+
+            $this->annotation_parase = new AnnotationParase(static::class, $redis ,$key,$config);
         }
         return   $this->annotation_parase ;
     }

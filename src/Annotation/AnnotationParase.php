@@ -9,6 +9,7 @@
 namespace RabbitMqRPC\Annotation;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\Annotations\AnnotationRegistry;
+use Doctrine\Common\Annotations\FileCacheReader;
 use ReflectionClass;
 use ReflectionMethod;
 use ReflectionProperty;
@@ -36,11 +37,25 @@ class AnnotationParase
     private $method = [];
     private $property = [];
 
-    public function __construct($class_name,$annotation_config = [])
+    public function __construct($class_name,$redis,$key,$annotation_config = [])
     {
         $this->reflection_class = new ReflectionClass($class_name);
         $this->annotation_config = $annotation_config ;
-        $this->annotation_reader = new AnnotationReader();
+
+
+        $this->annotation_reader =   new RedisCacheReader( new AnnotationReader(),$redis,$key);
+
+
+/*
+        if(!empty($this->annotation_config['cache'])) {
+            $this->annotation_reader = new FileCacheReader(
+                new AnnotationReader(),
+                $this->annotation_config['cache']);
+        }else{
+            $this->annotation_reader = new AnnotationReader();
+        }
+*/
+
     }
 
 

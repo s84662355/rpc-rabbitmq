@@ -11,7 +11,8 @@
     "require": {
         "php-amqplib/php-amqplib": "^2.9",
         "monolog/monolog": "~1.12",
-        "doctrine/annotations": "^1.7"
+        "doctrine/annotations": "^1.7",
+        "predis/predis": "^1.1"
     },
     "autoload": {
         "psr-4": {
@@ -19,5 +20,3 @@
         }
     }    
 }
-
-

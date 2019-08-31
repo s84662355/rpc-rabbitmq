@@ -16,6 +16,9 @@ abstract class AbstractCjhService extends   AbstractService
 
     protected function __construct( )
     {
+        $this->annotation_config = config('annotation_config');
+        $this->redis = app('redis');
+        $this->redis_key = config('annotation_config.redis_key');
         parent::__construct(app('cjh_rpc'));
     }
 
