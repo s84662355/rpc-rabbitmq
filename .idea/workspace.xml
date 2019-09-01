@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffa0d61-c7b0-4552-bee1-7e4ae80a8039" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/App/CjhRpcTestCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/annotation_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/annotation_config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cjh_rpc.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cjh_rpc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/rpc_handle.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/rpc_handle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AbstractClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractClient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Annotation/AnnotationParase.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Annotation/AnnotationParase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Annotation/AnnotationTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Annotation/AnnotationTrait.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Annotation/RedisCacheReader.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Annotation/RedisCacheReader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/AbstractCjhController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/AbstractCjhController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/AbstractCjhService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/AbstractCjhService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/AbstractService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/AbstractService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/CjhRpcProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/CjhRpcProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test6/dgdfgdfgdfgd/0531f059733324482b34f969397e0e33e9924f4c#__call.cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test6/dgdfgdfgdfgd/640ab2bae07bedc4c163f679a746f7ab7fb5d1fa#__construct.cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test6/dgdfgdfgdfgd/640ab2bae07bedc4c163f679a746f7ab7fb5d1fa#aaaa.cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test6/dgdfgdfgdfgd/640ab2bae07bedc4c163f679a746f7ab7fb5d1fa#after.cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test6/dgdfgdfgdfgd/640ab2bae07bedc4c163f679a746f7ab7fb5d1fa#before.cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test6/dgdfgdfgdfgd/640ab2bae07bedc4c163f679a746f7ab7fb5d1fa.cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test6/dgdfgdfgdfgd/889ce25900cef43836ca611443d1162e50a11030#callMethod.cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test6/dgdfgdfgdfgd/889ce25900cef43836ca611443d1162e50a11030#checkCanCallOn.cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test6/dgdfgdfgdfgd/889ce25900cef43836ca611443d1162e50a11030#getAnnotationParase.cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test6/dgdfgdfgdfgd/889ce25900cef43836ca611443d1162e50a11030#initAnnotationParase.cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test6/dgdfgdfgdfgd/889ce25900cef43836ca611443d1162e50a11030#setHandle.cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test6/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/test6/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test6/x.php" beforeDir="false" afterPath="$PROJECT_DIR$/test6/x.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +22,7 @@
               <entry file="file://$PROJECT_DIR$/src/App/CjhRpcCommand.php">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="540">
-                    <caret line="36" column="46" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="46" />
+                    <caret line="36" column="46" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="46" />
                     <folding>
                       <element signature="e#6#93#0#PHP" expanded="true" />
                     </folding>
@@ -96,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/test6/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="694">
-              <caret line="119" column="28" lean-forward="true" selection-start-line="119" selection-start-column="3" selection-end-line="119" selection-end-column="28" />
+              <caret line="119" column="28" selection-start-line="119" selection-start-column="3" selection-end-line="119" selection-end-column="28" />
               <folding>
                 <element signature="e#75#122#0#PHP" expanded="true" />
               </folding>
@@ -108,16 +83,16 @@
         <entry file="file://$PROJECT_DIR$/config/rpc_handle.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+              <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App/CjhRpcProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+            <state relative-caret-position="323">
+              <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
               <folding>
                 <element signature="e#122#161#0#PHP" expanded="true" />
               </folding>
@@ -129,16 +104,16 @@
         <entry file="file://$PROJECT_DIR$/src/Annotation/AnnotationTrait.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
-              <caret line="37" column="53" lean-forward="true" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="53" />
+              <caret line="37" column="53" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/annotation_config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
+            <state relative-caret-position="495">
+              <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -147,7 +122,7 @@
         <entry file="file://$PROJECT_DIR$/config/cjh_rpc.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" column="49" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="49" />
+              <caret line="9" column="49" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -268,10 +243,10 @@
         <option value="$PROJECT_DIR$/config/rpc_test.php" />
         <option value="$PROJECT_DIR$/src/AbstractServerListener.php" />
         <option value="$PROJECT_DIR$/src/App/CjhRpcTestCommand.php" />
-        <option value="$PROJECT_DIR$/src/App/CjhRpcProvider.php" />
         <option value="$PROJECT_DIR$/config/cjh_rpc.php" />
         <option value="$PROJECT_DIR$/config/rpc_handle.php" />
         <option value="$PROJECT_DIR$/config/annotation_config.php" />
+        <option value="$PROJECT_DIR$/src/App/CjhRpcProvider.php" />
       </list>
     </option>
   </component>
@@ -293,8 +268,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="181" />
-    <option name="y" value="-1348" />
+    <option name="x" value="287" />
+    <option name="y" value="-1321" />
     <option name="width" value="2012" />
     <option name="height" value="1314" />
   </component>
@@ -389,18 +364,18 @@
       <workItem from="1567093506055" duration="6205000" />
       <workItem from="1567171991164" duration="4020000" />
       <workItem from="1567256556251" duration="124000" />
-      <workItem from="1567305960070" duration="10954000" />
+      <workItem from="1567305960070" duration="11626000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148162000" />
+    <option name="totallyTimeSpent" value="148834000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="181" y="-1348" width="2012" height="1314" extended-state="0" />
+    <frame x="287" y="-1321" width="2012" height="1314" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32639593" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32639593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -413,7 +388,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.20703764" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.20703764" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -719,7 +694,7 @@
     <entry file="file://$PROJECT_DIR$/src/App/CjhRpcCommand.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
-          <caret line="36" column="46" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="46" />
+          <caret line="36" column="46" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="46" />
           <folding>
             <element signature="e#6#93#0#PHP" expanded="true" />
           </folding>
@@ -782,7 +757,7 @@
     <entry file="file://$PROJECT_DIR$/src/Annotation/AnnotationTrait.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="37" column="53" lean-forward="true" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="53" />
+          <caret line="37" column="53" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -796,7 +771,7 @@
     <entry file="file://$PROJECT_DIR$/test6/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="694">
-          <caret line="119" column="28" lean-forward="true" selection-start-line="119" selection-start-column="3" selection-end-line="119" selection-end-column="28" />
+          <caret line="119" column="28" selection-start-line="119" selection-start-column="3" selection-end-line="119" selection-end-column="28" />
           <folding>
             <element signature="e#75#122#0#PHP" expanded="true" />
           </folding>
@@ -817,34 +792,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/CjhRpcProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-          <folding>
-            <element signature="e#122#161#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/rpc_handle.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/cjh_rpc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="49" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="49" />
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/annotation_config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
+        <state relative-caret-position="495">
+          <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/CjhRpcProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+          <folding>
+            <element signature="e#122#161#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
