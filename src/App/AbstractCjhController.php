@@ -19,6 +19,7 @@ abstract class AbstractCjhController extends AbstractController
         $this->annotation_config = config('annotation_config');
         $this->redis = app('redis');
         $this->redis_key = config('annotation_config.redis_key');
+        $this->cleanCache = true;
         parent::__construct();
     }
 

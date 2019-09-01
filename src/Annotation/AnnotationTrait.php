@@ -29,6 +29,17 @@ trait AnnotationTrait
             $key = $this->redis_key;
 
             $this->annotation_parase = new AnnotationParase(static::class, $redis ,$key,$config);
+
+            if(isset($this->cleanCache))
+            {
+                $this->annotation_parase->cleanCache();
+            }
+
+            if(!empty($this->annotation_config['debug']))
+            {
+                $this->annotation_parase->setDeBug();
+            }
+
         }
         return   $this->annotation_parase ;
     }

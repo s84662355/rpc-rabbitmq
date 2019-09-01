@@ -42,20 +42,19 @@ class AnnotationParase
         $this->reflection_class = new ReflectionClass($class_name);
         $this->annotation_config = $annotation_config ;
 
-
         $this->annotation_reader =   new RedisCacheReader( new AnnotationReader(),$redis,$key);
 
+    }
 
-/*
-        if(!empty($this->annotation_config['cache'])) {
-            $this->annotation_reader = new FileCacheReader(
-                new AnnotationReader(),
-                $this->annotation_config['cache']);
-        }else{
-            $this->annotation_reader = new AnnotationReader();
-        }
-*/
+    public function cleanCache()
+    {
+        $this->annotation_reader->cleanCache();
+    }
 
+
+    public function setDeBug($debug = true)
+    {
+        $this->annotation_reader->setDeBug($debug);
     }
 
 

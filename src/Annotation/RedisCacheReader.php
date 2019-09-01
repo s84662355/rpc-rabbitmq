@@ -60,6 +60,16 @@ class RedisCacheReader implements Reader
         $this->redis_hash_key = $key;
     }
 
+    public function cleanCache()
+    {
+        $this->redis->del( $this->redis_hash_key );
+    }
+
+    public function setDeBug($debug = true)
+    {
+           $this->debug = $debug;
+    }
+
     /**
      * {@inheritDoc}
      */
@@ -128,9 +138,7 @@ class RedisCacheReader implements Reader
             $this->saveCacheFile($path, $annot);
         }
 
-
         return $this->loadedAnnotations[$key] = $annot;
-
     }
 
     /**
@@ -165,10 +173,7 @@ class RedisCacheReader implements Reader
             $annot = $this->reader->getMethodAnnotations($method);
             $this->saveCacheFile($path, $annot);
         }
-
         return $this->loadedAnnotations[$key] = $annot;
-
-
     }
 
     /**
@@ -181,6 +186,13 @@ class RedisCacheReader implements Reader
      */
     private function saveCacheFile($path, $data)
     {
+        if(!$this->redis->exists($this->redis_hash_key))
+        {
+            $this->redis->hset($this->redis_hash_key,'begin',date('Y-m-d h:i:s'));
+            $this->redis->expire($this->redis_hash_key,30);
+        }
+
+
         //$this->redis_hash_key;
     /// $written = file_put_contents($tempfile, '<?php return .unserialize('.var_export(serialize($data), true)');');
 

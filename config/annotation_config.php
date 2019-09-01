@@ -23,7 +23,12 @@ return [
 
     ],
 
+    //'debug' => env('RABBITMQ_RPC_DEBUG', true),
+    //'redis_key' => env('RABBITMQ_RPC_REDIS_KEY', 'RABBITMQ_RPC_REDIS_KEY'),
 
-    'cache' => 'dgdfgdfgdfgd'
+
+
+    'debug' => true,
+    'redis_key' =>   'RABBITMQ_RPC_REDIS_KEY' ,
 
 ];

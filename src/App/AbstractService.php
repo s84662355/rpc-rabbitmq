@@ -27,7 +27,7 @@ abstract class AbstractService
 
     protected $options = []; 
 
-    protected function __construct(AppRpc $cjh_rpc   )
+    protected function __construct(AppRpc $cjh_rpc )
     {
 
         $this->iniVariable();
@@ -39,7 +39,7 @@ abstract class AbstractService
 
     public function getRpcCli()
     {
-        return   $this->rpc_cli;
+        return $this->rpc_cli;
     }
 
     public function setOptions($options = [])

@@ -8,10 +8,13 @@
 namespace RabbitMqRPC\App;
 use Illuminate\Console\Command;
 
-class CjhRpcCommand  extends Command
+class CjhRpcTestCommand  extends Command
 {
-    ///php artisan CjhRpcCommand
-    protected $signature = ' CjhRpcCommand {name?}  {--c=} {--r=}  {--out=}';
+    ///php artisan CjhRpcTestCommand
+    protected $signature = ' CjhRpcCommand {--c=} {--r=}     ';
+
+
+    private $app_client = null;
 
     public function __construct()
     {
@@ -20,23 +23,32 @@ class CjhRpcCommand  extends Command
 
     public function handle()
     {
-        $name = $this->argument('name');
-        if(!empty($name))
+        $this->doHandle();
+        while (true)
         {
-            $file_out = $this->option('out');
-            $daemon = new Daemon($name);
-            return   $daemon->init( $this,$file_out);
+            $method = $this->ask( ' 输入需要调用的方法' );
+
 
         }
-        $this->doHandle( );
     }
 
     public function doHandle(  )
     {
         $connection = $this->option('c');
         $rpc_config      = $this->option('r');
-        $rpc_driver = app( 'cjh_rpc')->getDriver($connection);
-        $rpc_driver->AppServer($rpc_config)->startListen( );
+
+        $rpc_config  = config('cjh_rpc.driver.'.$connection.'.rpc_driver.config.'.$rpc_config);
+
+        $controller = $rpc_config['controller'];
+
+        $controller = new $controller();
+
+
+        $response = call_user_func_array([ $controller,'callMethod'],[$request_method,  $body , $options ]);
+
+
+
+
     }
 
 }

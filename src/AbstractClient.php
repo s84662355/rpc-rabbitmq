@@ -63,12 +63,8 @@ abstract class AbstractClient
             $rpc_client->call(serialize($arguments),$options, $this->timeout);
 
 
-
-
         $response = unserialize($response);
 
-        
-  
         return $this->make($response);
     }
 
