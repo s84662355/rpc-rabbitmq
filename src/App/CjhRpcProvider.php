@@ -19,6 +19,7 @@ class CjhRpcProvider  extends ServiceProvider
      */
     protected $commands = [
         CjhRpcCommand::class,
+        \RabbitMqRPC\Annotation\CjhCacheCommand::class,
     ];
 
 

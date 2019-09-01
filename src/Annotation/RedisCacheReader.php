@@ -189,7 +189,7 @@ class RedisCacheReader implements Reader
         if(!$this->redis->exists($this->redis_hash_key))
         {
             $this->redis->hset($this->redis_hash_key,'begin',date('Y-m-d h:i:s'));
-            $this->redis->expire($this->redis_hash_key,30);
+            $this->redis->expire($this->redis_hash_key,60*30);
         }
 
 
