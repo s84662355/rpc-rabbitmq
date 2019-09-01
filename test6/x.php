@@ -18,7 +18,7 @@ use Predis\Client;
 
 
 
-var_dump(unserialize("a:1:{i:0;O:32:"RabbitMqRPC\Annotation\RPCMethod":1:{s:6:"method";a:1:{i:0;s:4:"aaaa";}}}"))  ;
+///var_dump(unserialize("a:1:{i:0;O:32:"RabbitMqRPC\Annotation\RPCMethod":1:{s:6:"method";a:1:{i:0;s:4:"aaaa";}}}"))  ;
 
 $config =  [
     'default' =>  'first',

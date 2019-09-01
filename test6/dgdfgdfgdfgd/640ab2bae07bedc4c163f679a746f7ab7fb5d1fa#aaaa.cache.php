@@ -1,1 +1,0 @@
-<?php return unserialize('a:1:{i:0;O:33:"RabbitMqRPC\\Annotation\\CallMethod":1:{s:6:"handle";a:1:{i:0;s:5:"Test2";}}}');

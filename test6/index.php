@@ -9,9 +9,7 @@ use RabbitMqRPC\App\AppRpc;
 use RabbitMqRPC\Annotation\CallMethod;
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use RabbitMqRPC\App\AbstractMiddleware;
-
-
-
+use Predis\Client;
 
 
 $config =  [
@@ -50,6 +48,14 @@ class Test extends  \RabbitMqRPC\App\AbstractController
     public function __construct()
     {
         $this->annotation_config = include dirname(__DIR__ ). '/config/annotation_config.php';
+        $server = array(
+            'host'     => '127.0.0.1',
+            'port'     => 6379,
+            'database' =>0
+        );
+        $this->redis = new Client($server);
+        $this->redis_key = '1111';
+        $this->cleanCache = true;
         parent::__construct();
         echo "dsadsadsa";
     }
