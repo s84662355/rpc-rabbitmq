@@ -24,9 +24,10 @@ return [
                          '1' => [
                              'queue' => 'bbbbbbb',
                              'timeout' => 3,
-                             'length'   => 10,
+                             'length'   => 30,
                              'controller' => '',
                              'log_path' => '',
+                             'ttl'  => 10
 
                          ],
                     ],

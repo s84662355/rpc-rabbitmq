@@ -56,7 +56,6 @@ class CjhRpcProvider  extends ServiceProvider
             });
         }
 
-
     }
 
     /**

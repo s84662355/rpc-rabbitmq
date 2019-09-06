@@ -77,9 +77,15 @@ class RPCDriver
 
         $arguments = new AMQPTable();
 
-        if(!empty($config['length']))
+        if (!empty($config['length'])) {
+            $arguments->set('x-max-length', intval($config['length']));
+        }
+
+
+        ///x-message-ttl
+        if (!empty($config['ttl']))
         {
-            $arguments->set('x-max-length',intval($config['length']));
+            $arguments->set('x-message-ttl', intval($config['ttl']));
         }
  
         $this
